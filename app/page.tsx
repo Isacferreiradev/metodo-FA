@@ -13,6 +13,7 @@ import FAQ from "@/components/sections/FAQ";
 import FinalLetter from "@/components/sections/FinalLetter";
 import FinalCTA from "@/components/sections/FinalCTA";
 import Footer from "@/components/sections/Footer";
+import PurchaseNotification from "@/components/ui/PurchaseNotification";
 
 export default function Home() {
   return (
@@ -31,6 +32,7 @@ export default function Home() {
       <FAQ />
       <FinalLetter />
       <FinalCTA />
+      <PurchaseNotification />
       <Footer />
     </main>
   );

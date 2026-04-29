@@ -2,8 +2,8 @@ import SectionContainer from "@/components/ui/SectionContainer";
 import FadeInOnScroll from "@/components/ui/FadeInOnScroll";
 import Card from "@/components/ui/Card";
 import IconCircle from "@/components/ui/IconCircle";
-import { Search, MessageCircle, Clock, Users, Check } from "lucide-react";
-import { PuzzleIcon, ChatBubbleIcon, HomeIcon } from "@/components/ui/CustomIcons";
+import { Search, Clock, Check } from "lucide-react";
+import { ChatBubbleIcon, HomeIcon } from "@/components/ui/CustomIcons";
 
 type Tone = "rosa" | "amarelo" | "verde" | "azul" | "lilas";
 

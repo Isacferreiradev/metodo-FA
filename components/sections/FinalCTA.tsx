@@ -2,7 +2,6 @@ import SectionContainer from "@/components/ui/SectionContainer";
 import FadeInOnScroll from "@/components/ui/FadeInOnScroll";
 import CTAButton from "@/components/ui/CTAButton";
 import { Lock, Sparkles, Heart, CreditCard } from "lucide-react";
-import { config } from "@/lib/config";
 
 const SEALS = [
   { icon: Lock, label: "Compra 100% segura" },
