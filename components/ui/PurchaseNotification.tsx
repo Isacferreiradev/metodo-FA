@@ -32,20 +32,16 @@ export default function PurchaseNotification() {
     const showNotification = () => {
       const randomName = NAMES[Math.floor(Math.random() * NAMES.length)];
       const randomProduct = PRODUCTS[Math.floor(Math.random() * PRODUCTS.length)];
-      
+
       setCurrentNotification({ name: randomName, product: randomProduct });
       setIsVisible(true);
 
-      // Esconde após 4 segundos
       setTimeout(() => {
         setIsVisible(false);
       }, 4000);
     };
 
-    // Primeira execução
     const firstTimeout = setTimeout(showNotification, 5000);
-
-    // Loop a cada 10 segundos
     const interval = setInterval(showNotification, 10000);
 
     return () => {
@@ -58,28 +54,31 @@ export default function PurchaseNotification() {
     <AnimatePresence>
       {isVisible && currentNotification && (
         <motion.div
-          initial={{ opacity: 0, x: 50, y: 20 }}
+          initial={{ opacity: 0, x: 30, y: 12 }}
           animate={{ opacity: 1, x: 0, y: 0 }}
-          exit={{ opacity: 0, x: 50 }}
-          className="fixed bottom-4 right-4 z-[100] flex items-center gap-3 overflow-hidden rounded-2xl border border-white/20 bg-white/80 p-3 shadow-soft-lg backdrop-blur-md md:bottom-8 md:right-8 md:p-4"
+          exit={{ opacity: 0, x: 30 }}
+          className="fixed bottom-3 right-3 z-[100] flex max-w-[260px] items-center gap-2 overflow-hidden rounded-xl border border-white/20 bg-white/85 p-2 shadow-soft-lg backdrop-blur-md sm:max-w-[280px] md:bottom-8 md:right-8 md:max-w-xs md:gap-3 md:rounded-2xl md:p-4"
         >
-          <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-verde-menta/20 text-verde-menta">
-            <ShoppingCart className="h-5 w-5" />
+          <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-verde-menta/20 text-verde-menta md:h-10 md:w-10">
+            <ShoppingCart className="h-3.5 w-3.5 md:h-5 md:w-5" />
           </div>
-          
-          <div className="flex flex-col">
-            <p className="font-display text-sm font-bold text-azul-profundo">
+
+          <div className="flex min-w-0 flex-col">
+            <p className="truncate font-display text-[11px] font-bold leading-tight text-azul-profundo md:text-sm">
               {currentNotification.name}
             </p>
-            <p className="font-body text-xs text-cinza-cuidado">
-              acabou de comprar <span className="font-semibold text-azul-profundo">{currentNotification.product}</span>
+            <p className="font-body text-[10px] leading-tight text-cinza-cuidado md:text-xs">
+              comprou{" "}
+              <span className="font-semibold text-azul-profundo">
+                {currentNotification.product}
+              </span>
             </p>
-            <p className="mt-1 font-body text-[10px] text-verde-menta font-medium">
+            <p className="mt-0.5 font-body text-[9px] font-medium text-verde-menta md:mt-1 md:text-[10px]">
               há poucos segundos
             </p>
           </div>
-          
-          <div className="absolute top-0 right-0 h-1 w-full bg-verde-menta/10">
+
+          <div className="absolute right-0 top-0 h-0.5 w-full bg-verde-menta/10 md:h-1">
             <motion.div
               initial={{ width: "100%" }}
               animate={{ width: "0%" }}

@@ -26,7 +26,7 @@ function FloatingStar({ className, delay = "0s" }: { className?: string; delay?:
 
 export default function Hero() {
   return (
-    <SectionContainer bgClassName="bg-azul-bebe" className="relative pt-12 md:pt-20">
+    <SectionContainer bgClassName="bg-azul-bebe" className="relative overflow-hidden pt-12 md:pt-20">
       {/* Decorações flutuantes */}
       <FloatingCloud className="left-4 top-12 h-16 w-24 animate-float md:left-16 md:h-20 md:w-32" />
       <FloatingCloud className="right-8 top-32 h-12 w-20 animate-float md:right-24 md:h-16 md:w-28" delay="2s" />

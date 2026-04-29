@@ -41,10 +41,10 @@ export default function Plans() {
         </h2>
       </FadeInOnScroll>
 
-      <div className="mt-10 grid gap-6 md:mt-14 md:grid-cols-2 md:items-stretch md:gap-8">
+      <div className="mt-10 grid gap-10 md:mt-14 md:grid-cols-2 md:items-stretch md:gap-8">
         {/* Essencial */}
         <FadeInOnScroll>
-          <div className="flex h-full flex-col gap-5 rounded-card bg-branco-nuvem p-7 shadow-soft md:p-9">
+          <div className="flex h-full flex-col gap-5 rounded-card bg-branco-nuvem p-6 shadow-soft md:p-9">
             <div>
               <h3 className="font-hero text-2xl text-azul-profundo md:text-3xl">
                 Essencial
@@ -82,7 +82,7 @@ export default function Plans() {
 
         {/* Completo */}
         <FadeInOnScroll delay={0.1}>
-          <div className="relative flex h-full flex-col gap-5 rounded-card bg-amarelo-sol/70 p-7 shadow-soft-lg md:p-9">
+          <div className="relative flex h-full flex-col gap-5 rounded-card bg-amarelo-sol/70 p-6 pt-8 shadow-soft-lg md:p-9 md:pt-9">
             <div className="absolute -top-4 left-1/2 -translate-x-1/2">
               <span className="rounded-pill bg-coral-quente px-5 py-1.5 font-display text-sm font-bold text-white shadow-soft">
                 Mais Vendido
